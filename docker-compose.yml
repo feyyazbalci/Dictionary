@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  sozluk.api.webapi:
+    image: ${DOCKER_REGISTRY-}sozlukapiwebapi
+    build:
+      context: .
+      dockerfile: src/Api/WebApi/Sozluk.Api.WebApi/Dockerfile
+
+  sozluk.webapp:
+    image: ${DOCKER_REGISTRY-}sozlukwebapp
+    build:
+      context: .
+      dockerfile: src/Clients/BlazorWeb/Sozluk.WebApp/Dockerfile
+
+       
